@@ -14,8 +14,7 @@ my $n = @data[$i];
 
 for ^$i -> $j {
     ([\,] @data[$j ..^ $i]).first: *.sum == $n
-    andthen .sort.minmax andthen .head + .tail andthen .say
-    
+    andthen .sort andthen say(.[0] + .[*-1])
 }
 
 # 4389369
